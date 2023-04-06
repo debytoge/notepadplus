@@ -1,0 +1,46 @@
+1. How to remove everything after a certain character?
+
+case => email:pass | text | text | text | text
+result => email:pass
+
+press CTRL +Shift
+go to replace
+press on regular expression
+In the Find what write [|].*
+press Replace all
+
+or
+
+\|.*
+
+2. How would I delete the first 27 characters from every line Notepad++?
+
+   Find what: ^.{27}(.*)$
+   Replace with: $1
+   
+   or
+   
+   Use regular expression search, search for:
+
+    ^...........................(.*.\r\n) 
+    and replace with:
+
+    \1
+    
+    or
+   Use regular expression search, search for ^........................... and replace with (empty string).
+    
+3. How to remove text before | character in notepad++
+   find: .+(\|) replace: \1
+   
+4. To replace anything that starts with "text" until the last character:
+    text.+(.*)$
+    
+    - To replace anything that starts with "text" until "123"
+      text.+(\ 123)
+      
+
+    
+
+
+
